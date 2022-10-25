@@ -1,0 +1,170 @@
+.lodging {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width:800px) {
+        flex-direction: column;
+
+    }
+
+    h1 {
+        font-weight: 500;
+        size: 36px;
+        line-height: 51.34px;
+        color: $colour-primary;
+        font-size: 36px;
+        transition-duration: 1s;
+
+        @media (max-width: 800px) {
+            font-size: 18px;
+            line-height: 40px;
+            transition-duration: 1s;
+        }
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 18px;
+        color: $colour-primary;
+        margin-top: -25px;
+        transition-duration: 1s;
+
+        @media (max-width: 800px) {
+            font-size: 14px;
+            line-height: 19.96px;
+            transition-duration: 1s;
+        }
+    }
+}
+
+
+
+.lodging-tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-right: 30px;
+        margin-top: 5px;
+        width: 120px;
+        height: 35px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $colour-tertiary;
+        background-color: $colour-primary;
+
+        @media (max-width: 800px) {
+            font-size: 10px;
+            width: 84px;
+            height: 25px;
+            margin-top: 5px;
+            margin-right: 10px;
+            border-radius: 5px;
+            transition-duration: 1s;
+        }
+    }
+}
+
+
+.account {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .account-host{
+        margin-top: 15px;
+    }
+    .account-star{
+        margin-left: 30px;
+        @media (max-width: 800px){
+            margin-left: 0;
+        }
+    }
+    @media (max-width: 800px) {
+        display: grid;
+        grid-template-rows: 100%;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+
+
+        .account-host {
+            grid-column: 2/2;
+            justify-self: end;
+            margin-top: 0;
+        }
+
+        .account-star {
+            grid-column: 1/1;
+            grid-row: 1/1;
+        }
+    }
+}
+
+
+.account-host-list {
+    display: flex;
+    align-items: center;
+}
+
+.account-host-name {
+    width: 93px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 18px;
+    color: $colour-primary;
+
+    @media (max-width: 800px) {
+        font-size: 12px;
+        line-height: 17.11px;
+    }
+}
+
+.account-host-img {
+    height: 64px;
+    width: 64px;
+    border-radius: 32px;
+
+    @media (max-width: 800px) {
+        height: 32px;
+        width: 32px;
+    }
+}
+
+.account-host-star {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 22px;
+
+    @media (max-width: 800px) {
+        height: 15px;
+        width: 15px;
+        margin-bottom: 0;
+    }
+}
+
+
+.lodging-description-bloc {
+    display: flex;
+    // align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+
+    div {
+        width: 46%;
+    }
+
+    button {
+        @include drop-down;
+
+        +div {
+            @include drop-down-description;
+
+        }
+    }
+}

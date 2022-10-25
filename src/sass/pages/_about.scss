@@ -1,0 +1,29 @@
+.banner-about {
+    @media(max-width: 800px) {
+        height: 223px;
+    }
+}
+
+
+
+.about-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+
+    div {
+        width: 100%;
+    }
+
+
+    button {
+        width: 100%;
+        @include drop-down;
+
+        +div {
+            width: 100%;
+            @include drop-down-description
+        }
+    }
+}

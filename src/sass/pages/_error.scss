@@ -1,0 +1,38 @@
+.error {
+    text-align: center;
+    color: $colour-primary;
+    min-height: 100vh;
+
+    h1 {
+        font-size: 288px;
+        font-weight: 700px;
+        margin: 0;
+
+        @media(max-width: 800px) {
+            font-size: 96px;
+        }
+
+    }
+
+    h2 {
+        font-size: 36px;
+        font-weight: 500px;
+
+        @media(max-width: 800px) {
+            font-size: 18px;
+            line-height: 25.67px;
+        }
+    }
+
+    p {
+        color: $colour-primary;
+        font-size: 18px;
+        font-weight: 500px;
+        margin-top: 150px;
+
+        @media(max-width: 800px) {
+            font-size: 14px;
+            line-height: 19.96px;
+        }
+    }
+}
