@@ -2,9 +2,18 @@
     display: flex;
     justify-content: space-between;
 
-    @media (max-width:800px) {
+    @media (max-width:820px) {
         flex-direction: column;
 
+    }
+
+    .lodging-location{
+        width: 69%;
+        @media (max-width:820px) {
+            width: 100%;
+    
+        }
+    
     }
 
     h1 {
@@ -15,9 +24,9 @@
         font-size: 36px;
         transition-duration: 1s;
 
-        @media (max-width: 800px) {
+        @media (max-width: 820px) {
             font-size: 18px;
-            line-height: 40px;
+            line-height: 25.67px;
             transition-duration: 1s;
         }
     }
@@ -29,8 +38,10 @@
         margin-top: -25px;
         transition-duration: 1s;
 
-        @media (max-width: 800px) {
+        @media (max-width: 820px) {
+            margin-bottom: 10px;
             font-size: 14px;
+            margin-top: -8px;
             line-height: 19.96px;
             transition-duration: 1s;
         }
@@ -43,6 +54,9 @@
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
+    @media (max-width: 820px) {
+        margin-top: -5px;
+    }
 
     li {
         display: flex;
@@ -59,11 +73,10 @@
         color: $colour-tertiary;
         background-color: $colour-primary;
 
-        @media (max-width: 800px) {
+        @media (max-width: 820px) {
             font-size: 10px;
             width: 84px;
             height: 25px;
-            margin-top: 5px;
             margin-right: 10px;
             border-radius: 5px;
             transition-duration: 1s;
@@ -77,15 +90,23 @@
     flex-direction: column;
     justify-content: space-between;
     .account-host{
-        margin-top: 15px;
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .account-star-bloc{
+        display: flex;
+        justify-content: space-between;
     }
     .account-star{
         margin-left: 30px;
-        @media (max-width: 800px){
+        @media (max-width: 820px){
             margin-left: 0;
+            margin-top: -30px;
         }
     }
-    @media (max-width: 800px) {
+    @media (max-width: 820px) {
         display: grid;
         grid-template-rows: 100%;
         grid-template-columns: 50% 50%;
@@ -105,20 +126,19 @@
     }
 }
 
-
-.account-host-list {
-    display: flex;
-    align-items: center;
-}
-
 .account-host-name {
-    width: 93px;
     font-family: 'Montserrat';
+    text-align: right;
+    line-height: 25.67px;
+    width: 80px;
+    margin-right: 10px;
     font-weight: 500;
     font-size: 18px;
     color: $colour-primary;
 
-    @media (max-width: 800px) {
+    @media (max-width: 820px) {
+        line-height: 5px;
+        width: 50px;
         font-size: 12px;
         line-height: 17.11px;
     }
@@ -129,7 +149,7 @@
     width: 64px;
     border-radius: 32px;
 
-    @media (max-width: 800px) {
+    @media (max-width: 820px) {
         height: 32px;
         width: 32px;
     }
@@ -139,32 +159,44 @@
     height: 30px;
     width: 30px;
     margin-bottom: 22px;
+    margin-left: 5px;
 
-    @media (max-width: 800px) {
+    @media (max-width: 820px) {
         height: 15px;
         width: 15px;
-        margin-bottom: 0;
     }
 }
 
 
 .lodging-description-bloc {
     display: flex;
-    // align-items: baseline;
     justify-content: space-between;
     width: 100%;
     min-height: 100vh;
+    @media (max-width: 800px) {
+        min-height: 50vh;
+    }
 
     div {
         width: 46%;
+        @media (max-width: 600px) {
+            width: 100%;
+        }
     }
 
     button {
         @include drop-down;
+        @media (max-width: 600px) {
+            margin-top: 18px;
+        }
 
         +div {
             @include drop-down-description;
 
         }
+    }
+    @media (max-width: 600px) {
+        flex-direction: column;
+        justify-content: flex-start;
     }
 }

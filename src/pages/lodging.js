@@ -20,6 +20,7 @@ export default function Fiche() {
   console.log(found);
 //tableau avec le nombre d'étoile max 
   const rang = [1, 2, 3, 4, 5]
+  console.log(found.rating);
 
   return (
     <div>
@@ -30,7 +31,7 @@ export default function Fiche() {
 
       <section >
         <div className='lodging'>
-          <div>
+          <div className='lodging-location'>
             <h1>{found.title}</h1>
             <h2>{found.location}</h2>
             <ul className='lodging-tags'>
@@ -42,15 +43,16 @@ export default function Fiche() {
 
           <div className='account'>
             <div className='account-host'>
-              <ul className='account-host-list'>
-                <li className='account-host-name'>{found.host.name}</li>
-                <li><img src={found.host.picture} alt={`Visage de ${found.host.name}`} className='account-host-img' /></li>
-              </ul>
+                <span className='account-host-name'>{found.host.name}</span>
+                <img src={found.host.picture} alt={`Visage de ${found.host.name}`} className='account-host-img' />
+              
             </div>
+            <div className='account-star-bloc'>
             {/* grace a .map sur tabl rang affiche le nombre de star */}
             <div className='account-star'>{rang.map((rangElement) =>
               found.rating >= rangElement ? <span key={rangElement}> <img src={starFull} alt='starFull' className='account-host-star' /></span> : <span key={rangElement}><img src={starEmpty} alt='starEmpty' className='account-host-star' /></span>
             )}
+            </div>
             </div>
           </div>
         </div>
