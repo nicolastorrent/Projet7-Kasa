@@ -1,3 +1,14 @@
+# Projet 7 - " KASA "
+
+
+Skills assessed:
+
+- Initialize an application with Create React App
+- Develop elements of the interface of a website using React components
+- Configure navigation between application pages with React Router
+- Web developer course - OpenClassRoom
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
